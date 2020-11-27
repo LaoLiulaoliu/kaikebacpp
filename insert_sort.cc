@@ -15,7 +15,7 @@ void insert_sort(int *arr, int l, int r) {
     return;
 }
 
-void ungarded_insert_sort(int *arr, int l, int r) {
+void unguarded_insert_sort(int *arr, int l, int r) {
     int ind = l;
     for (int i = l + 1; i <= r; i++) {
         if (arr[i] < arr[ind]) ind = i;

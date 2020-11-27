@@ -1,6 +1,8 @@
-#include <string>
+#include <cstring>
+#include <cstdio>
 #include <stdlib.h>
 #include <time.h>
+#include <color.h>
 
 #define TEST(func, arr, n) __TEST(func, arr, n, #func);
 
@@ -18,12 +20,13 @@ void __TEST(
 
     int *temp = (int *)malloc(sizeof(int) * n);
     memcpy(temp, arr, sizeof(int) * n);
+
     long long b = clock();
     func(temp, 0, n - 1);
     long long e = clock();
 
     if (check(temp, n)) {
-        printf("[  OK    ] %s\t", func_name);
+        GREEN("[  OK    ] %s\t", func_name);
     } else {
         printf("[FAILED  ] %s\t", func_name);
     }

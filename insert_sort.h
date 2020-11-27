@@ -4,6 +4,6 @@
 
 
 void insert_sort(int *arr, int l, int r);
-void ungarded_insert_sort(int *arr, int l, int r);
+void unguarded_insert_sort(int *arr, int l, int r);
 
 #endif

@@ -5,7 +5,6 @@
 long binary_section_search(long *arr, long length, long target) {
     long low = 0;
     long high = length;
-    printf("low:%ld, high:%ld\n", low, high);
 
     if (target < arr[low] || target > arr[high]) {
         return -1;
@@ -60,7 +59,7 @@ static PyObject * _binary_section_search(PyObject *self, PyObject *args)
         _array[i] = PyLong_AsLong(next);
         i += 1;
     }
-    printf("length: %ld, target: %ld\n", i, _target);
+    //printf("length: %ld, target: %ld\n", i, _target);
     ret = binary_section_search(_array, _len, _target);
     return Py_BuildValue("l", ret);
     //return PyLong_FromLong(ret);

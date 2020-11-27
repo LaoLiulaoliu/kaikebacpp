@@ -11,7 +11,7 @@ void quick_sort_v1(int *arr, int l, int r) {
     while (x < y) {
         while (x < y && arr[y] >= z) --y;
         if (x < y) arr[x++] = arr[y];
-        while (x < y && arr[x] <=z) ++x;
+        while (x < y && arr[x] <= z) ++x;
         if (x < y) arr[y--] = arr[x];
     }
     arr[x] = z;

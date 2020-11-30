@@ -28,7 +28,7 @@ void __TEST(
     if (check(temp, n)) {
         GREEN("[  OK    ] %s\t", func_name);
     } else {
-        printf("[FAILED  ] %s\t", func_name);
+        RED("[FAILED  ] %s\t", func_name);
     }
     printf("%lld ms\n", 1000 * (e-b) / CLOCKS_PER_SEC);
     free(temp);

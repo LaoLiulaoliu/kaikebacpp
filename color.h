@@ -1,6 +1,6 @@
 
 
-#define COLOR(msg, code, args...) printf("\033[0;1;" #code "m" msg "\033[0m", args)
+#define COLOR(msg, code, args...) printf("\033[0;1;" #code "m" msg "\033[0m", ##args)
 #define RED(msg, args...)    COLOR(msg, 31, args)
 #define GREEN(msg, args...)  COLOR(msg, 32, args)
 #define YELLOW(msg, args...) COLOR(msg, 33, args)
